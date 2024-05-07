@@ -70,7 +70,6 @@ export default {
       userDetails: {},
 
       // ПРИМЕРЫ созданных вопосов и ответов
-      // в целях экономии вермени - данные из БД уже получены (условно)
       activeSurveys: [
         // {
         //   id_sur: 1,
@@ -128,9 +127,6 @@ export default {
 
   async created() {
     try {
-      // РАЗКОМЕНТИРОВАТЬ после ручного создания Пользователя, Вопросов, Опросов,
-      // Ответов в панели админа (выше приведен пример)
-
       const survey = await this.$apollo.query({
         query: All_SURVEYS,
       });
